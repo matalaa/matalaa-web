@@ -277,7 +277,7 @@ include ("_include/php/parameters_$lang.php");
   <!-- Carousel items -->
   <div class="carousel-inner">	
   				<div class="active item">
-					<a href="http://www.zazzle.com/matalaa/ipad+cases?cg=196852741159933128" target="_blank">
+					<a href="http://www.zazzle.com/matalaa/gifts?cg=196852741159933128" target="_blank">
 						<img src="_include/img/slider-images/website_ipad.png">
 					</a>
 				</div>
