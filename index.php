@@ -13,13 +13,13 @@ include ("_include/php/parameters_$lang.php");
 <!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
 <head>
-<link rel="SHORTCUT ICON" href="http://www.leboutdumondekep.com/tmp/matalaa/favicon.ico">
+<link rel="SHORTCUT ICON" href="favicon.ico">
 <!-- Meta Tags -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <title>Matala'a | The eyes of the sun</title>   
 
-<meta name="description" content="Custom Maori, Samoan and Polynesian inspired artwork" /> 
+<meta name="description" content="Artist based in Noumea. Polynesian/maori inspired tattoo project, logo, album artwork, objects customization, you name it.." /> 
 <meta name="keywords" content="matala'a,wallis,polynesie,tribal,polynesian,maori,moko,tattoo,tatau,tapa,polynesia,art,drawing,dessin,koru,graphic, design,kiri tuhi,Aotearoa,Samoa,Wallis,Tonga,Fidji"> 
 
 <!-- Mobile Specifics -->
@@ -252,7 +252,7 @@ include ("_include/php/parameters_$lang.php");
 
 
 <!-- Shop Section -->
-<div id="about" class="page-alternate">
+<div id="shop" class="page-alternate">
 <div class="container">
     <!-- Title Page -->
     <div class="row">
