@@ -19,17 +19,17 @@ $myWork_others="Other Projects";
 //-----------------------------SHOP-------------------------------------
 $shopTitle="Shop";
 $shopeDesc="You can also order already customized objects <a href=\"http://www.zazzle.com/matalaa/\" target=\"_blank\"><span class=\"color-text\">online</span></a>.<br>All designs are <span class=\"color-text\">original creations</span> and hand drawn at first.";
-$shopeDesc2="You can also edit the item,<br>the colour or the size as you wish.</span><span class=\"msg2\">Click on the image to order";
+$shopeDesc2="You can also edit the item,<br>the colour or the size as you wish.</span><span class=\"msg2\">Click on the image to go to the store<br> and see more cool stuff";
 //-----------------------------CONTACT-------------------------------------
 $contactTitle="Design project";
-$contactDesc="I'm opened to any project (customization, tattoo art, others..).";
+$contactDesc="I'm open to any project (customization, tattoo art, others..).";
 $contactDesc2="Please use this form!";
 $contact_name="Full Name";
 $contact_address="Email Address";
 $contact_msg="Your Message";
 $contact_button="Send Your Email";
 $contact_details="CONTACT DETAILS";
-$contact_email="contact[at]matalaa.com<br>Tel: (+687) 72-84-47";
+$contact_email="matalaa[at]hotmail.com<br>Tel: (+687) 72-84-47";
 $contact_city="Nouméa<br>New Caledonia";
 //-----------------------------SOCIAL-------------------------------------
 $socialTitle="Don't forget to follow me on <span class=\"color-text\">Facebook</span> or <span class=\"color-text\">Twitter</span> and check out my <span class=\"color-text\">Zazzle</span> online shop:";
