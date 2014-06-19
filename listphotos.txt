@@ -3,9 +3,6 @@ handmade;cap;_include/img/work/full/full_handmade_cap.jpg;_include/img/work/thum
 handmade;cap2;_include/img/work/full/full_handmade_cap2.jpg;_include/img/work/thumbs/thumb_handmade_cap2.jpg;Cap mixed maori/nesian
 handmade;fridge1;_include/img/work/full/full_handmade_fridge1.jpg;_include/img/work/thumbs/thumb_handmade_fridge1.jpg;Fridge mixed maori/samoan
 handmade;fridge2;_include/img/work/full/full_handmade_fridge2.jpg;_include/img/work/thumbs/thumb_handmade_fridge2.jpg;Fridge mixed polynesian
-handmade;fridge3;_include/img/work/full/full_handmade_fridge3.jpg;_include/img/work/thumbs/thumb_handmade_fridge3.jpg;Fridge mixed maori/samoan
-handmade;oven;_include/img/work/full/full_handmade_oven.jpg;_include/img/work/thumbs/thumb_handmade_oven.jpg;Oven mixed polynesian
-handmade;phone;_include/img/work/full/full_handmade_phone.jpg;_include/img/work/thumbs/thumb_handmade_phone.jpg;Phone mixed maori
 handmade;ukulele;_include/img/work/full/full_handmade_ukulele.jpg;_include/img/work/thumbs/thumb_handmade_ukulele.jpg;Ukulele mixed wallis tapa/samoan/maori
 handmade;door;_include/img/work/full/full_handmade_door.jpg;_include/img/work/thumbs/thumb_handmade_door.jpg;Door surfer style
 tattoo;tattoo1;_include/img/work/full/full_other_tattoo1.jpg;_include/img/work/thumbs/thumb_other_tattoo1.jpg;tattoo lotus 
