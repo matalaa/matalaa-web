@@ -151,7 +151,7 @@ include ("_include/php/parameters_$lang.php");
         	<ul id="menu-nav">
             	<li class="current"><a href="#home-slider"><?php echo $menu1; ?></a></li>
                 <li><a href="#work"><?php echo $menu2; ?></a></li>
-                <li><a href="#about"><?php echo $menu3; ?></a></li>
+                <li><a href="#shop"><?php echo $menu3; ?></a></li>
                 <li><a href="#contact"><?php echo $menu4; ?></a></li>
                
             </ul>
