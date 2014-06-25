@@ -18,7 +18,7 @@ $myWork_tattoo="Tattoo design";
 $myWork_others="Other Projects";
 //-----------------------------SHOP-------------------------------------
 $shopTitle="Shop";
-$shopeDesc="You can also order already customized objects <a href=\"http://www.zazzle.com/matalaa/\" target=\"_blank\"><span class=\"color-text\">online</span></a>.<br>All designs are <span class=\"color-text\">original creations</span> and hand drawn at first.";
+$shopeDesc="All designs are <span class=\"color-text\">original creations</span> and hand drawn at first.<br><a href=\"http://www.zazzle.com/matalaa/\" target=\"_blank\">Click <span class=\"color-text\">here</span> to visit the online shop.</a>";
 $shopeDesc2="You can also edit the item,<br>the colour or the size as you wish.</span><span class=\"msg2\">Click on the image to go to the store<br> and see more cool stuff";
 //-----------------------------CONTACT-------------------------------------
 $contactTitle="Design project";

@@ -135,14 +135,16 @@ include ("_include/php/parameters_$lang.php");
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
         <div id="logo">
-        	<a id="goUp" href="#home-slider" title="Matala'a | The eyes of the sun"></a>
+        	<a id="goUp" href="#home-slider" data-toggle="tooltip" data-placement="bottom" title="Matala'a | The eyes of the sun"></a>
         </div>
         <div id="social-area">
                 <nav id="social">
                     <ul>
+                    	<li><font size="6">{</font></li>
                         <li><a href="https://www.facebook.com/matalaadesign" data-toggle="tooltip" data-placement="bottom" title="<?php echo $socialFB; ?>" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
                         <li><a href="https://twitter.com/_matalaa_" data-toggle="tooltip" data-placement="bottom" title="twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
                         <li><a href="<?php echo $zazzle; ?>matalaa" data-toggle="tooltip" data-placement="bottom" title="<?php echo $socialZazzle; ?>" target="_blank"><span class="font-icon-social-zerply"></span></a></li>
+                        <li><font size="6">}</font></li>
                     </ul>
                 </nav>
         </div>
@@ -266,7 +268,7 @@ include ("_include/php/parameters_$lang.php");
         </div>
     </div>
     <!-- End Title Page -->
-    <!-- People -->
+    <!-- Carousel -->
     <div class="row">
     <div id="myCarousel" class="carousel slide">
   <ol class="carousel-indicators">
