@@ -9,6 +9,6 @@ tattoo;tattoo1;_include/img/work/full/full_other_tattoo1.jpg;_include/img/work/t
 tattoo;tattoo2;_include/img/work/full/full_other_tattoo2.jpg;_include/img/work/thumbs/thumb_other_tattoo2.jpg;tattoo artwork mixed tahitian
 tattoo;tattoo3;_include/img/work/full/full_other_tattoo3.jpg;_include/img/work/thumbs/thumb_other_tattoo3.jpg;tattoo tribal
 other;house of shem;_include/img/work/full/full_other_houseofshem.jpg;_include/img/work/thumbs/thumb_other_houseofshem.jpg;House of shem album cover project artwork maori/samoan/fidjian/wallis
-other;fridgeWailers;_include/img/work/full/full_other_wailersFridge.jpg;_include/img/work/thumbs/thumb_other_wailersFridge.jpg;The Wailers fridge
-other;fridgeBen;_include/img/work/full/full_other_benFridge.jpg;_include/img/work/thumbs/thumb_other_benFridge.jpg;Ben Harper fridge
-other;wallSkate;_include/img/work/full/full_other_skateWall.jpg;_include/img/work/thumbs/thumb_other_skateWall.jpg;Skate wall
+other;logo;_include/img/work/full/full_other_logo.jpg;_include/img/work/thumbs/thumb_other_logo.jpg;logo
+other;phone;_include/img/work/full/full_other_phone.jpg;_include/img/work/thumbs/thumb_other_phone.jpg;phone
+other;logo2;_include/img/work/full/full_other_logo2.jpg;_include/img/work/thumbs/thumb_other_logo2.jpg;logo2
