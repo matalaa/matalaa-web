@@ -98,8 +98,8 @@ class Contact_Form{
 		$response['status'] = $this->response_status;	
 		$response['html'] = $this->response_html;
 		
-		/*echo json_encode($response);*/
-		echo '<p>Thank You!</p>';
+		echo json_encode($response);
+		/*echo '<p>Thank You!</p>';*/
 	}
 }
 

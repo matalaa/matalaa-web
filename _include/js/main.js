@@ -198,14 +198,18 @@ BRUSHED.contactForm = function(){
 			data: fields,
 			dataType: 'json',
 			success: function(response) {
-				
 				if(response.status){
 					$('#contact-form input').val('');
 					$('#contact-form textarea').val('');
 				}
 				
 				$('#response').empty().html(response.html);
-			}
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+    			var test = $.parseJSON(jqXHR.responseText);
+   				var test2 = $.parseJSON(test.d);
+    			alert(test2[0].Name);
+			},
 		});
 		return false;
 	});
