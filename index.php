@@ -1,9 +1,25 @@
 <?php
-$lang=$_POST['lang'];
-if(is_null($lang)){
-	$lang="en"; 
-	} 
-include ("_include/php/parameters_$lang.php");
+if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+  preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $lang_parse);
+  if (count($lang_parse[1])){
+    $langs = array_combine($lang_parse[1], $lang_parse[4]);
+    foreach ($langs as $lang => $val){
+      if ($val === '') $langs[$lang] = 1;
+    }
+    //arsort($langs, SORT_NUMERIC);
+  }
+  $language = 'en';
+  foreach ($langs as $lang => $val){
+    if (strpos($lang,'fr')===0){
+      $language = 'fr';
+      break;
+    } 
+  }
+}
+//if(is_null($language)){
+//	$language="en"; 
+//	} 
+include ("_include/php/parameters_$language.php");
 
 ?>
 <!DOCTYPE html>
@@ -279,22 +295,22 @@ include ("_include/php/parameters_$lang.php");
   <!-- Carousel items -->
   <div class="carousel-inner">	
   				<div class="active item">
-					<a href="http://www.zazzle.com/matalaa/gifts?cg=196852741159933128" target="_blank">
+					<a href="<?php echo $zazzle; ?>matalaa/gifts?cg=196852741159933128" target="_blank">
 						<img src="_include/img/slider-images/website_ipad.png">
 					</a>
 				</div>
 				<div class="item">
-					<a href="http://www.zazzle.com/matalaa/gifts?cg=196687929279901308" target="_blank">
+					<a href="<?php echo $zazzle; ?>matalaa/gifts?cg=196687929279901308" target="_blank">
 						<img src="_include/img/slider-images/website_clothe.png">
 					</a>
 				</div>
 				<div class="item">
-					<a href="http://www.zazzle.com/matalaa/gifts?cg=196635979569104900" target="_blank">
+					<a href="<?php echo $zazzle; ?>matalaa/gifts?cg=196635979569104900" target="_blank">
 						<img src="_include/img/slider-images/website_sleeve.png">
 					</a>
 				</div>
 				<div class="item">
-					<a href="http://www.zazzle.com/matalaa/" target="_blank">
+					<a href="<?php echo $zazzle; ?>matalaa/" target="_blank">
 						<img src="_include/img/slider-images/website_other.png">
 					</a>
 				</div>
