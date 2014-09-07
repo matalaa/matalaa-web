@@ -190,7 +190,7 @@ BRUSHED.contactForm = function(){
 	$("#contact-submit").on('click',function() {
 		$contact_form = $('#contact-form');
 		
-		var fields = $contact_form.serialize();
+		var fields = $contact_form.serialize()+"&subject=Contact from your website";
 		
 		$.ajax({
 			type: "POST",
@@ -213,6 +213,168 @@ BRUSHED.contactForm = function(){
 		});
 		return false;
 	});
+}
+
+
+/* ==================================================
+   Shop Form
+================================================== */
+
+BRUSHED.shopForm = function(){
+	/*
+		declare the vars
+	*/
+	var size=null;
+	var qtty=0;
+	var newPrice=0;
+	var liv=0;
+	var livStr="non";
+	var ad1=null;
+	var ad2=null;
+	var ad3=null;
+	var mail="";
+	var name="";
+	$("#mainTab").on('click',function() {
+		/* reload page */
+		location.reload();
+	});
+	$("#shop-submit1").on('click',function() {
+		
+		var basePrice=2500;
+		var baseDeliveryPrice=500;
+		/* check form
+		 */
+		size = document.forms["shop-form1"]["size"].value;
+    	if (size == null || size == "none") {
+			$('#responseShop').empty().html("<font color=\"red\">Veuillez choisir une taille</font>");
+        	return false;
+    	}
+		qtty = document.forms["shop-form1"]["quantity"].value;
+    	if (qtty == null || qtty == "none") {
+        	$('#responseShop').empty().html("<font color=\"red\">Veuillez choisir une quantité</font>");
+        	return false;
+    	}
+		liv = document.getElementById('doDeliver').checked?1:0;
+		/* calculate price */
+		newPrice = basePrice*qtty + liv*qtty*baseDeliveryPrice;
+		
+		/* activate the infos livs
+		but hide the liv address if liv=0*/
+		$('.nav-tabs > .active').next('li')[0].style.display="";
+		$('.nav-tabs > .active').next('li').find('a').trigger('click');
+		/* fill the recap div */
+		var responseText2="<br/>total à payer => "+qtty+"x"+basePrice;
+		
+		
+		if (liv == 1){
+			document.getElementById('ad-liv').style.display="";
+			livStr="oui";
+			responseText2+=" + "+qtty+"x"+baseDeliveryPrice+" (livraison)";
+		}
+		var responseText1="<u>RECAP COMMANDE</u>: taille: "+size+", quantité: "+qtty +", livraison: "+livStr;
+		var recapOrder=responseText1+responseText2+ " = <b>"+newPrice+"cfp</b>";
+		$('#recap').empty().html(recapOrder);
+        	
+		
+    	
+	});
+	$("#shop-submit2").on('click',function() {
+		/* check form
+		 */
+		name = document.forms["shop-form2"]["name"].value;
+    	if (name == null || name == "") {
+			$('#responseShop2').empty().html("<font color=\"red\">Veuillez saisir votre nom et prénom</font>");
+        	return false;
+    	}
+		mail = document.forms["shop-form2"]["email"].value;
+		var re = /\S+@\S+\.\S+/;
+    	if (re.test(mail) == false) {
+        	$('#responseShop2').empty().html("<font color=\"red\">Veuillez saisir un email valide</font>");
+        	return false;
+    	}
+		ad1 = document.forms["shop-form2"]["adress"].value;
+    	ad2 = document.forms["shop-form2"]["postCode"].value;
+    	ad3 = document.forms["shop-form2"]["city"].value;
+		if (liv == 1){
+			if (ad1 == "" || isNaN(ad2) == true || ad3 == "") {
+				$('#responseShop2').empty().html("<font color=\"red\">Veuillez saisir votre adresse complète</font>");
+        		return false;
+    		}
+		}
+		$('#responseShop2').empty();
+		
+		/* launch bill with newPrice
+		pk_test_tNU31VJhGfF52OrEeE9Un4F0
+		pk_live_GFH31bGg0LjNCanNOl3Tf9EQ
+		*/
+		var handler = StripeCheckout.configure({
+   			 key: 'pk_test_tNU31VJhGfF52OrEeE9Un4F0',
+   			 image: 'https://scontent-b-hkg.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10347239_872040652823427_4401894174088211437_n.jpg?oh=6de7d37358285eb92599c0e733b98f68&oe=54A0C010',
+   			 token: callback
+ 		 });
+		// Open Checkout with further options
+    	handler.open({
+      		name: 'Matalaa TShirt NC',
+      		description: '',
+      		amount: newPrice,
+			email: mail,
+			currency: 'XPF'
+    	});
+	});
+	
+	
+	
+	var callback = function(token) {
+		/* pay 
+		   serialize infos
+		   send infos by mail  
+		*/
+		var charge = "token="+token.id+"&amount="+newPrice+"&currency=XPF&description=Achat sur www.matalaa.com";
+		$.ajax({
+			type: "POST",
+			url: "_include/php/stripe.php",
+			data: charge,
+			dataType: 'json',
+			success: function mail(response) {
+					if(response.status == 0){
+						window.alert("un problème est survenu, merci de reitérer votre achat ultérieurement");
+					}
+					/* send a mail to me*/
+					var mailmsg="Bonjour, \n Merci d'avoir acheté sur www.matalaa.com, voici le récapitulatif de votre commande: \n"+
+					"-Désignation: TShirt Matala'a NC \n"+
+					"-Taille: "+size+" \n "+
+					"-Quantité: "+qtty+" \n "+
+					"-Livraison: "+livStr+" \n "+
+					"-Adresse de livraison: "+ad1+" "+ad2+" "+ad3+" \n "+
+					"=>Total payé: "+newPrice+" frcs"+" \n "+
+					" \n "+
+					"Matala'a";
+					var fields = "name="+name+"&email="+mail+"&message=" + mailmsg+"&subject=Achat sur www.matalaa.com";
+					$.ajax({
+						type: "POST",
+						url: "_include/php/contact.php",
+						data: fields,
+						dataType: 'json',
+						success: function(response) {
+							location.reload();
+							window.alert("Merci d'avoir acheté sur www.matalaa.com, un mail de confirmation va vous être envoyé");
+						},
+						error: function (jqXHR, textStatus, errorThrown) {
+    						window.alert("un problème est survenu, merci de reitérer votre achat ultérieurement");
+						},
+					});
+	
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+    			var test = $.parseJSON(jqXHR.responseText);
+   				var test2 = $.parseJSON(test.d);
+    			alert(test2[0].Name);
+			},
+		});
+	};
+	
+	
+	
 }
 
 
@@ -440,6 +602,7 @@ $(document).ready(function(){
 	BRUSHED.filter();
 	BRUSHED.fancyBox();
 	BRUSHED.contactForm();
+	BRUSHED.shopForm();
 	BRUSHED.tweetFeed();
 	BRUSHED.scrollToTop();
 	BRUSHED.utils();

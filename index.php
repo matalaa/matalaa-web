@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
   preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $lang_parse);
   if (count($lang_parse[1])){
@@ -16,6 +17,7 @@ if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
     } 
   }
 }
+
 //if(is_null($language)){
 //	$language="en"; 
 //	} 
@@ -216,9 +218,10 @@ include ("_include/php/parameters_$language.php");
                     <ul id="filters" class="option-set" data-option-key="filter">
                     	<li class="type-work"><?php echo $myWork_type; ?></li>
                         <!--li><a href="#filter" data-option-value="*" class="selected"><?php echo $myWork_all; ?></a></li-->
-                        <li><a href="#filter" data-option-value=".handmade" class="selected"><?php echo $myWork_handmade; ?></a></li>
-                        <li><a href="#filter" data-option-value=".tattoo"><?php echo $myWork_tattoo; ?></a></li>
-                        <li><a href="#filter" data-option-value=".other"><?php echo $myWork_others; ?></a></li>
+                        <li><a href="#filter" data-option-value=".logo" class="selected">logos</a></li>
+                        <li><a href="#filter" data-option-value=".tattoo">tattoo designs</a></li>
+                        <li><a href="#filter" data-option-value=".phone">phone case</a></li>
+                        <li><a href="#filter" data-option-value=".sketch">sketches</a></li>
                         
                     </ul>
                 </nav>
