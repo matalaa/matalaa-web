@@ -340,8 +340,8 @@ BRUSHED.shopForm = function(){
 						window.alert("un problème est survenu, merci de reitérer votre achat ultérieurement");
 					}
 					/* send a mail to me*/
-					var mailmsg="Bonjour, \n Merci d'avoir acheté sur www.matalaa.com, voici le récapitulatif de votre commande: \n"+
-					"-Désignation: TShirt Matala'a NC \n"+
+					var mailmsg="Bonjour, \n Merci d'avoir acheté sur www.matalaa.com, voici le récapitulatif de votre commande: \n "+
+					"-Désignation: TShirt Matala'a NC \n "+
 					"-Taille: "+size+" \n "+
 					"-Quantité: "+qtty+" \n "+
 					"-Livraison: "+livStr+" \n "+
