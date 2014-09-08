@@ -223,8 +223,6 @@ BRUSHED.contactForm = function(){
 BRUSHED.shopForm = function(){
 	$body = $("body");
 
-	
-	
 	/*
 		declare the vars
 	*/
@@ -262,22 +260,24 @@ BRUSHED.shopForm = function(){
 		
 		/* calculate price */
 		var livPrice = 0;
-		switch (parseInt(qtty)) {
-			case 1:
-				livPrice = 500;
-				break;
-			case 2:
-				livPrice = 500;
-				break;
-			case 3:
-				livPrice = 700;
-				break;
-			case 4:
-				livPrice = 700;
-				break;
-			case 5:
-				livPrice = 700;
-				break;
+		if (liv == 1){
+			switch (parseInt(qtty)) {
+				case 1:
+					livPrice = 500;
+					break;
+				case 2:
+					livPrice = 500;
+					break;
+				case 3:
+					livPrice = 700;
+					break;
+				case 4:
+					livPrice = 700;
+					break;
+				case 5:
+					livPrice = 700;
+					break;
+			}
 		}
 		
 		newPrice = basePrice*qtty + livPrice;
@@ -332,7 +332,7 @@ BRUSHED.shopForm = function(){
 		pk_live_GFH31bGg0LjNCanNOl3Tf9EQ
 		*/
 		var handler = StripeCheckout.configure({
-   			 key: 'pk_live_GFH31bGg0LjNCanNOl3Tf9EQ',
+   			 key: 'pk_test_tNU31VJhGfF52OrEeE9Un4F0',
    			 image: 'https://scontent-b-hkg.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10347239_872040652823427_4401894174088211437_n.jpg?oh=6de7d37358285eb92599c0e733b98f68&oe=54A0C010',
    			 token: callback
  		 });

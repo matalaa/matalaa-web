@@ -1013,9 +1013,9 @@ nav#menu #menu-nav li a:hover {
 	box-sizing: border-box;
 }
 
-#contact-form .submit {
-    background: #3C3F45;
-    color: #23262C;
+.submit {
+    background: #ffffff;
+    color: #000000;
     cursor: pointer;
     display: inline-block;
     font-size: 18px;
@@ -1025,14 +1025,14 @@ nav#menu #menu-nav li a:hover {
     vertical-align: middle;
     width: auto;
 	margin-top: 30px;
-	
+	border-radius: 15px;
 	-webkit-transition: background 0.1s linear 0s, color 0.1s linear 0s;	
 	   -moz-transition: background 0.1s linear 0s, color 0.1s linear 0s;
 		 -o-transition: background 0.1s linear 0s, color 0.1s linear 0s;
 		    transition: background 0.1s linear 0s, color 0.1s linear 0s;
 }
 
-#contact-form .submit:hover {
+.submit:hover {
     background: #DE5E60;
     color: #FFFFFF;
 }
