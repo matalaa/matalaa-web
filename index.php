@@ -418,7 +418,8 @@ $_GET['showHowMany'] = '100';
     		<div class="row">
         		<div class="span12">
             		<div class="title-page">
-                		<h2bis class="title">Instagram, follow <span class="color-text"><a href="http://instagram.com/matalaapolynesianart">@matalaapolynesianart</a></span> </h2bis><br>
+                		<h2bis class="title">Instagram, </h2bis><br>
+                		<h3bis class="title-description">follow <span class="color-text"><a href="http://instagram.com/matalaapolynesianart">@matalaapolynesianart</a></span> </h3bis>
                 		<style>.ig-b- { display: inline-block; }
 							.ig-b- img { visibility: hidden; }
 							.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
