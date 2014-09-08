@@ -29,7 +29,7 @@ $contact_address="Email Address";
 $contact_msg="Your Message";
 $contact_button="Send Your Email";
 $contact_details="CONTACT DETAILS";
-$contact_email="matalaa[at]hotmail.com<br>Tel: (+687) 72-84-47";
+$contact_email="contact[at]matalaa.com<br>Tel: (+687) 72-84-47<br>Instagram: @matalaapolynesianart";
 $contact_city="Nouméa<br>New Caledonia";
 //-----------------------------SOCIAL-------------------------------------
 $socialTitle="Don't forget to follow me on <span class=\"color-text\">Facebook</span> or <span class=\"color-text\">Twitter</span> and check out my <span class=\"color-text\">Zazzle</span> online shop:";
