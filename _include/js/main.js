@@ -335,7 +335,7 @@ BRUSHED.shopForm = function(){
 			url: "_include/php/stripe.php",
 			data: charge,
 			dataType: 'json',
-			success: function mail(response) {
+			success: function (response) {
 					if(response.status == 0){
 						window.alert("un problème est survenu, merci de reitérer votre achat ultérieurement");
 					}
@@ -356,8 +356,13 @@ BRUSHED.shopForm = function(){
 						data: fields,
 						dataType: 'json',
 						success: function(response) {
+							if(response.status == 0){
+								window.alert("un problème est survenu, merci de me contacter à contact@matalaa.com");
+							} else {
+								window.alert("Merci d'avoir acheté sur www.matalaa.com, un mail de confirmation va vous être envoyé");
+							}
 							location.reload();
-							window.alert("Merci d'avoir acheté sur www.matalaa.com, un mail de confirmation va vous être envoyé");
+							
 						},
 						error: function (jqXHR, textStatus, errorThrown) {
     						window.alert("un problème est survenu, merci de reitérer votre achat ultérieurement");
