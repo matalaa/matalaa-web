@@ -29,7 +29,7 @@ $contact_address="Email";
 $contact_msg="Message";
 $contact_button="Envoyer le mail";
 $contact_details="ME CONTACTER";
-$contact_email="contact[at]matalaa.com<br>Tel: (+687) 72-84-47<br>Instagram: @matalaapolynesianart";
+$contact_email="contact[at]matalaa.com<br>Tel: (+687) 72-84-47";
 $contact_city="Nouméa<br>Nouvelle Calédonie";
 //-----------------------------SOCIAL-------------------------------------
 $socialTitle="N'oubliez pas de me suivre sur <span class=\"color-text\">Facebook</span> ou <span class=\"color-text\">Twitter</span>  et de passer par ma boutique <span class=\"color-text\">Zazzle</span> en ligne:";

@@ -49,6 +49,12 @@ a:focus{
 	text-decoration:none;
 }
 
+h2bis a:hover, h3bis a:hover{
+	color:#DE5E60;
+	opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
 a img {
 	border: none;
 }
@@ -1031,7 +1037,6 @@ nav#menu #menu-nav li a:hover {
 		 -o-transition: background 0.1s linear 0s, color 0.1s linear 0s;
 		    transition: background 0.1s linear 0s, color 0.1s linear 0s;
 }
-
 .submit:hover {
     background: #DE5E60;
     color: #FFFFFF;
@@ -1465,3 +1470,19 @@ li.content {
   height: 100%;
   width: 100%;
 }
+
+/******************************
+* SHOP
+******************************/
+
+#shopImg img{
+	width:70%;height:auto;border: 2px solid black;
+            border-radius: 30px;
+            -moz-border-radius: 30px;
+            -khtml-border-radius: 30px;
+            -webkit-border-radius: 30px;
+}
+
+#shopImg {
+	
+} 

@@ -173,6 +173,7 @@ include ("_include/php/parameters_$language.php");
                 <li><a href="#work"><?php echo $menu2; ?></a></li>
                 <li><a href="#shop"><?php echo $menu3; ?></a></li>
                 <li><a href="#contact"><?php echo $menu4; ?></a></li>
+				<li><a href="#instagram">INSTAGRAM</a></li>
                
             </ul>
         </nav>
@@ -398,13 +399,6 @@ $_GET['showHowMany'] = '100';
         		<h3><?php echo $contact_details; ?></h3>
                 <ul>
                     <li><span class="color-text"><?php echo $contact_email; ?>
-					<style>.ig-b- { display: inline-block; }
-							.ig-b- img { visibility: hidden; }
-							.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
-							.ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
-							@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-							.ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
-							<a href="http://instagram.com/matalaapolynesianart?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
 					</span></li>
                     <li>
                     	<?php echo $contact_city; ?>
@@ -415,10 +409,38 @@ $_GET['showHowMany'] = '100';
     </div>
     <!-- End Contact Form -->
     
-    
 </div>
 </div>
 <!-- End Contact Section -->
+<div id="instagram" class="page-alternate">
+		<div class="container">
+    		<!-- Title Page -->
+    		<div class="row">
+        		<div class="span12">
+            		<div class="title-page">
+                		<h2bis class="title">Instagram, follow <span class="color-text"><a href="http://instagram.com/matalaapolynesianart">@matalaapolynesianart</a></span> </h2bis><br>
+                		<style>.ig-b- { display: inline-block; }
+							.ig-b- img { visibility: hidden; }
+							.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+							.ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
+							@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+							.ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
+							<a href="http://instagram.com/matalaapolynesianart?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
+					
+    				</div>
+        		</div>
+    		</div>
+    		<!-- End Title Page -->
+    		<!-- Carousel -->
+    		<div class="row">
+				<!-- SnapWidget -->
+<script src="http://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="http://snapwidget.com/in/?u=bWF0YWxhYXBvbHluZXNpYW5hcnR8aW58MTI1fDN8M3x8bm98NXxmYWRlT3V0fG9uU3RhcnR8eWVzfHllcw==&ve=080914" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+
+			</div>
+		</div>
+	</div>
+
 
 <!--/li><li class="content"-->
 
