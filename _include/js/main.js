@@ -221,6 +221,10 @@ BRUSHED.contactForm = function(){
 ================================================== */
 
 BRUSHED.shopForm = function(){
+	$body = $("body");
+
+	
+	
 	/*
 		declare the vars
 	*/
@@ -589,6 +593,16 @@ BRUSHED.toolTip = function(){
 ================================================== */
 
 /*BRUSHED.slider();*/
+$(document).on({
+    	ajaxStart: function() {
+			var divToAdd="<div id=\"fancybox-overlay\" class=\"fancybox-overlay fancybox-overlay-fixed\" style=\"width: auto; height: auto; display: block;\"><div class=\"fancybox-wrap fancybox-desktop fancybox-type-image fancybox-tmp\" tabindex=\"-1\"><div class=\"fancybox-skin\" style=\"padding: 0px;\"><div class=\"fancybox-outer\"><div class=\"fancybox-inner\"></div></div></div></div></div><div id=\"fancybox-loading\"><div></div></div>";
+			$(divToAdd).appendTo(document.body);    
+			},
+     	ajaxComplete: function() {
+			document.getElementById("fancybox-overlay").remove();
+			document.getElementById("fancybox-loading").remove();
+			},  
+	});
 
 $(document).ready(function(){
 	/*Modernizr.load([
