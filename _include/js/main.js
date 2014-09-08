@@ -255,8 +255,28 @@ BRUSHED.shopForm = function(){
         	return false;
     	}
 		liv = document.getElementById('doDeliver').checked?1:0;
+		
 		/* calculate price */
-		newPrice = basePrice*qtty + liv*qtty*baseDeliveryPrice;
+		var livPrice = 0;
+		switch (parseInt(qtty)) {
+			case 1:
+				livPrice = 500;
+				break;
+			case 2:
+				livPrice = 500;
+				break;
+			case 3:
+				livPrice = 700;
+				break;
+			case 4:
+				livPrice = 700;
+				break;
+			case 5:
+				livPrice = 700;
+				break;
+		}
+		
+		newPrice = basePrice*qtty + livPrice;
 		
 		/* activate the infos livs
 		but hide the liv address if liv=0*/
@@ -269,7 +289,7 @@ BRUSHED.shopForm = function(){
 		if (liv == 1){
 			document.getElementById('ad-liv').style.display="";
 			livStr="oui";
-			responseText2+=" + "+qtty+"x"+baseDeliveryPrice+" (livraison)";
+			responseText2+=" + "+livPrice+" (livraison)";
 		}
 		var responseText1="<u>RECAP COMMANDE</u>: taille: "+size+", quantité: "+qtty +", livraison: "+livStr;
 		var recapOrder=responseText1+responseText2+ " = <b>"+newPrice+"cfp</b>";
@@ -308,7 +328,7 @@ BRUSHED.shopForm = function(){
 		pk_live_GFH31bGg0LjNCanNOl3Tf9EQ
 		*/
 		var handler = StripeCheckout.configure({
-   			 key: 'pk_test_tNU31VJhGfF52OrEeE9Un4F0',
+   			 key: 'pk_live_GFH31bGg0LjNCanNOl3Tf9EQ',
    			 image: 'https://scontent-b-hkg.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10347239_872040652823427_4401894174088211437_n.jpg?oh=6de7d37358285eb92599c0e733b98f68&oe=54A0C010',
    			 token: callback
  		 });
@@ -340,7 +360,8 @@ BRUSHED.shopForm = function(){
 						window.alert("un problème est survenu, merci de reitérer votre achat ultérieurement");
 					}
 					/* send a mail to me*/
-					var mailmsg="Bonjour, \n Merci d'avoir acheté sur www.matalaa.com, voici le récapitulatif de votre commande: \n "+
+					var mailmsg="Bonjour, \n \n"+
+					"Merci d'avoir acheté sur www.matalaa.com, voici le récapitulatif de votre commande: \n "+
 					"-Désignation: TShirt Matala'a NC \n "+
 					"-Taille: "+size+" \n "+
 					"-Quantité: "+qtty+" \n "+
