@@ -345,7 +345,7 @@ BRUSHED.shopForm = function(){
 					"-Taille: "+size+" \n "+
 					"-Quantité: "+qtty+" \n "+
 					"-Livraison: "+livStr+" \n "+
-					"-Adresse de livraison: "+ad1+" "+ad2+" "+ad3+" \n "+
+					"-Adresse de livraison: "+name +" "+ad1+" "+ad2+" "+ad3+" \n "+
 					"=>Total payé: "+newPrice+" frcs"+" \n "+
 					" \n "+
 					"Matala'a";
