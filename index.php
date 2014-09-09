@@ -402,6 +402,9 @@ $_GET['showHowMany'] = '100';
                     <li><span class="color-text"><?php echo $contact_email; ?>
 					</span></li>
 					<li>
+                    	<?php echo $contact_city; ?>
+                    </li>
+					<li>
 					<div class="fb-like-box" data-href="https://www.facebook.com/matalaadesign" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
 					</li>
 					<li>
@@ -418,9 +421,6 @@ $_GET['showHowMany'] = '100';
 							<a href="http://instagram.com/matalaapolynesianart?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a>
 					
 					</li>
-                    <li>
-                    	<?php echo $contact_city; ?>
-                    </li>
                 </ul>
             </div>
         </div>
