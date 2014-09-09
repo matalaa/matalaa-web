@@ -9,7 +9,7 @@ $menu3="SHOP";
 $menu4="CONTACT";
 //-----------------------------MY WORK-------------------------------------
 $myWorkTitle="My Work";
-$myWorkDesc="I Create custom <span class=\"color-text\">maori/polynesian</span> inspired design, and transform <span class=\"color-text\">your</span> objects with them.";
+$myWorkDesc="I Create custom <span class=\"color-text\">maori/polynesian</span> inspired design, and make <span class=\"color-text\">your</span> projects come true.";
 $myWork_type="Type of Work";
 $myWork_all="All Projects";
 $myWork_handmade="Handmade Art";
@@ -18,8 +18,9 @@ $myWork_tattoo="Tattoo design";
 $myWork_others="Other Projects";
 //-----------------------------SHOP-------------------------------------
 $shopTitle="Shop";
-$shopeDesc="All designs are <span class=\"color-text\">original creations</span> and hand drawn at first.<br><a href=\"http://www.zazzle.com/matalaa/\" target=\"_blank\">Click <span class=\"color-text\">here</span> to visit the online shop.</a>";
+$shopeDesc="All designs are <span class=\"color-text\">original creations</span> and hand drawn at first.";
 $shopeDesc2="You can also edit the item,<br>the colour or the size as you wish.</span><span class=\"msg2\">Click on the image to go to the store<br> and see more cool stuff";
+$shopButton="<a class=\"button\" href=\"http://www.zazzle.com/matalaa/\" target=\"_blank\">Online store.</a>";
 //-----------------------------CONTACT-------------------------------------
 $contactTitle="Design project";
 $contactDesc="I'm open to any project (customization, tattoo art, others..).";
