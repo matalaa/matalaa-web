@@ -9,7 +9,7 @@ $menu3="SHOP";
 $menu4="CONTACT";
 //-----------------------------MY WORK-------------------------------------
 $myWorkTitle="Mon Travail";
-$myWorkDesc="Je crée des dessins originaux <span class=\"color-text\">maoris/polynesiens</span> à la main et transforme <span class=\"color-text\">vos</span> objets.";
+$myWorkDesc="Je crée des dessins originaux <span class=\"color-text\">maoris/polynesiens</span> à la main et met en forme <span class=\"color-text\">vos</span> projets.";
 $myWork_type="Type de travail";
 $myWork_all="Tous Projets";
 $myWork_handmade="Customisation";

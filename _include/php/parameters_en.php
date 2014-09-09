@@ -9,7 +9,7 @@ $menu3="SHOP";
 $menu4="CONTACT";
 //-----------------------------MY WORK-------------------------------------
 $myWorkTitle="My Work";
-$myWorkDesc="I Create custom <span class=\"color-text\">maori/polynesian</span> inspired design, and transform <span class=\"color-text\">your</span> objects with them.";
+$myWorkDesc="I Create custom <span class=\"color-text\">maori/polynesian</span> inspired design, and make <span class=\"color-text\">your</span> projects come true.";
 $myWork_type="Type of Work";
 $myWork_all="All Projects";
 $myWork_handmade="Handmade Art";
