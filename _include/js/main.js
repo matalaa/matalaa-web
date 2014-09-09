@@ -242,6 +242,20 @@ BRUSHED.shopForm = function(){
 		/* reload page */
 		location.reload();
 	});
+	$('#quantity').on('change',function(){
+		qtty = document.forms["shop-form1"]["quantity"].value;
+    	var textToInsert='';
+    	for (i = 1; i <= qtty; i++) { 
+			textToInsert += "<select name=\"size"+i+"\" style=\"width:100px\" form=\"shop-form1\">"+
+  											"<option value=\"none\">Taille"+((qtty==1)?"":" n°"+i)+"</option>"+
+  											"<option value=\"M\">M</option>"+
+  											"<option value=\"L\">L</option>"+
+  											"<option value=\"XL\">XL</option>"+
+  											"<option value=\"XXL\">XXL</option>"+
+										"</select><br/>";
+		}
+		$('#shop-form1-size').empty().html(textToInsert);
+	});
 	/*****************
 	* listener for the first form
 	******************/
@@ -251,11 +265,16 @@ BRUSHED.shopForm = function(){
 		var baseDeliveryPrice=500;
 		/* check form
 		 */
-		size = document.forms["shop-form1"]["size"].value;
-    	if (size == null || size == "none") {
-			$('#responseShop').empty().html("<font color=\"red\">Veuillez choisir une taille</font>");
-        	return false;
-    	}
+		size='';
+		for (i = 1; i <= qtty; i++) { 
+			var sizeTmp = document.forms["shop-form1"]["size"+i].value;
+    		if (sizeTmp == null || sizeTmp == "none") {
+				$('#responseShop').empty().html("<font color=\"red\">Veuillez choisir une taille</font>");
+        		return false;
+    		}
+			size+= sizeTmp+", ";
+		}
+		size = size.substring(0, size.length-2);
 		qtty = document.forms["shop-form1"]["quantity"].value;
     	if (qtty == null || qtty == "none") {
         	$('#responseShop').empty().html("<font color=\"red\">Veuillez choisir une quantité</font>");
@@ -299,7 +318,7 @@ BRUSHED.shopForm = function(){
 		}
 		
 		//fill the recap table
-		$('#recapProduct').empty().html(designation +" taille: "+ size);
+		$('#recapProduct').empty().html(designation +" taille(s): "+ size);
 		$('#recapQtty').empty().html(qtty);
 		$('#recapUnitPrice').empty().html(basePrice);
 		$('#livraison').empty().html("livraison");
@@ -379,8 +398,8 @@ BRUSHED.shopForm = function(){
 					var mailmsg="Bonjour, \n \n"+
 					"Merci d'avoir acheté sur www.matalaa.com, voici le récapitulatif de votre commande: \n "+
 					"-Désignation: "+designation+" \n "+
-					"-Taille: "+size+" \n "+
 					"-Quantité: "+qtty+" \n "+
+					"-Taille(s): "+size+" \n "+
 					"-Livraison: "+livStr+" \n "+
 					"-Adresse de livraison: "+name +" "+ad1+" "+ad2+" "+ad3+" \n "+
 					"=>Total payé: "+newPrice+" frcs"+" \n "+
@@ -669,4 +688,11 @@ $(window).resize(function(){
 	BRUSHED.mobileNav();
 });
 
+/*$('.zoom_img').elevateZoom({
+    zoomType: "inner",
+cursor: "crosshair",
+zoomWindowFadeIn: 500,
+zoomWindowFadeOut: 750
+   });
+*/
 });

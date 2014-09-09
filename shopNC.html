@@ -129,7 +129,7 @@
 		<!-- Start Blockquote -->
             <div class="span5" id="shopImg">
            		<img src="_include/img/shop/nc_tee.png"/>
-           		<img src="_include/img/shop/nc.png" />
+           		<img src="_include/img/shop/nc.png"/>
 				
 			</div>
 			<div class="span7">
@@ -145,16 +145,8 @@
                             <div id="shopDiv" >
 								<p>TShirt polynésien - Matala'a NC (2&nbsp;500frcs/TShirt)</p>
 								<form id="shop-form1" class="contact-form" action="#">
-            						<div style="float: left;" >
-										<select name="size" style="width:100px" form="shop-form1">
-  											<option value="none">Taille</option>
-  											<option value="M">M</option>
-  											<option value="L">L</option>
-  											<option value="XL">XL</option>
-  											<option value="XXL">XXL</option>
-										</select>
-										<br/> 
-										<select name="quantity" style="width:100px" form="shop-form1">
+            						<div style="float: left;" id="shop-form1-div" >
+										<select id="quantity" name="quantity" style="width:100px" form="shop-form1">
   											<option value="none">Quantité</option>
   											<option value="1">1</option>
   											<option value="2">2</option>
@@ -163,6 +155,16 @@
 											<option value="5">5</option>
 										</select>
 										<br/>
+										<div id="shop-form1-size">
+										<select name="size1" style="width:100px" form="shop-form1">
+  											<option value="none">Taille</option>
+  											<option value="M">M</option>
+  											<option value="L">L</option>
+  											<option value="XL">XL</option>
+  											<option value="XXL">XXL</option>
+										</select>
+										<br/>
+										</div>
 										Livraison (500frcs): &nbsp;
 										<input type="radio" id="doDeliver" name="doDeliver" value="1"> oui
 										<input type="radio" name="doDeliver" checked value="0"> non
@@ -262,7 +264,7 @@
 	<i class="font-icon-arrow-simple-up"></i>
 </a>
 <!-- End Back to Top -->
-
+<div id="fb-root"></div>
 <!-- Js -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
 <script src="_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->
@@ -278,7 +280,6 @@
 <!-- SnapScroll Core Files -->
 <script type="text/JavaScript" src="_include/js/dependencies/jquery.scroll_to.js"></script>
 <script type="text/JavaScript" src="_include/js/jquery.snapscroll.js"></script>
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
