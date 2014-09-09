@@ -282,6 +282,7 @@ include ("_include/php/parameters_$language.php");
             <div class="title-page">
                 <h2bis class="title"><?php echo $shopTitle; ?></h2bis><br>
                 <h3bis class="title-description"><?php echo $shopeDesc; ?></h3bis>
+                <p><br/><?php echo $shopButton; ?><br/></p>
                 <span class="msg"><?php echo $shopeDesc2; ?></span>
     
             </div>
