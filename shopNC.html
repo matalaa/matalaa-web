@@ -189,8 +189,32 @@
 						<div class="tab-pane fade in" id="tab2">
 							<form id="shop-form2" class="contact-form" action="#">
             					<div id="recap">
+									Récapitulatif de la commande: <br/>
+									<table style="width:60%;">
+										<tr>
+											<td>Description</td>
+											<td>qtt</td>
+											<td>prix unitaire</td>
+										</tr>
+										<tr>
+											<td id="recapProduct"/>
+											<td id="recapQtty"/>
+											<td id="recapUnitPrice"/>
+										</tr>
+										<tr>
+											<td id="livraison"/>
+											<td id="recapLivQtty"/>
+											<td id="recapLivPrice"/>
+										</tr>
+										<tr>
+											<td>TOTAL</td>
+											<td />
+											<td id="recapTotal"/>
+										</tr>
+									</table>
                 				</div>
 								<br/>
+								Informations client: <br/>
 								<p class="contact-name">
             						<input id="contact_name" type="text" placeholder="Nom Prénom" value="" name="name" />
                 				</p>

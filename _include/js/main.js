@@ -236,10 +236,15 @@ BRUSHED.shopForm = function(){
 	var ad3=null;
 	var mail="";
 	var name="";
+	var designation="TShirt Matala'a NC";
+	
 	$("#mainTab").on('click',function() {
 		/* reload page */
 		location.reload();
 	});
+	/*****************
+	* listener for the first form
+	******************/
 	$("#shop-submit1").on('click',function() {
 		
 		var basePrice=2500;
@@ -286,22 +291,28 @@ BRUSHED.shopForm = function(){
 		but hide the liv address if liv=0*/
 		$('.nav-tabs > .active').next('li')[0].style.display="";
 		$('.nav-tabs > .active').next('li').find('a').trigger('click');
-		/* fill the recap div */
-		var responseText2="<br/>total à payer => "+qtty+"x"+basePrice;
-		
 		
 		if (liv == 1){
 			document.getElementById('ad-liv').style.display="";
 			livStr="oui";
 			responseText2+=" + "+livPrice+" (livraison)";
 		}
-		var responseText1="<u>RECAP COMMANDE</u>: taille: "+size+", quantité: "+qtty +", livraison: "+livStr;
-		var recapOrder=responseText1+responseText2+ " = <b>"+newPrice+"cfp</b>";
-		$('#recap').empty().html(recapOrder);
+		
+		//fill the recap table
+		$('#recapProduct').empty().html(designation +" taille: "+ size);
+		$('#recapQtty').empty().html(qtty);
+		$('#recapUnitPrice').empty().html(basePrice);
+		$('#livraison').empty().html("livraison");
+		$('#recapLivQtty').empty().html(liv);
+		$('#recapLivPrice').empty().html(livPrice);
+		$('#recapTotal').empty().html(newPrice + " FrcsCFP");
         	
 		
     	
 	});
+	/*****************
+	* listener for the second form
+	******************/
 	$("#shop-submit2").on('click',function() {
 		/* check form
 		 */
@@ -346,8 +357,9 @@ BRUSHED.shopForm = function(){
     	});
 	});
 	
-	
-	
+	/*****************
+	* listener for the stripe process
+	******************/
 	var callback = function(token) {
 		/* pay 
 		   serialize infos
@@ -366,7 +378,7 @@ BRUSHED.shopForm = function(){
 					/* send a mail to me*/
 					var mailmsg="Bonjour, \n \n"+
 					"Merci d'avoir acheté sur www.matalaa.com, voici le récapitulatif de votre commande: \n "+
-					"-Désignation: TShirt Matala'a NC \n "+
+					"-Désignation: "+designation+" \n "+
 					"-Taille: "+size+" \n "+
 					"-Quantité: "+qtty+" \n "+
 					"-Livraison: "+livStr+" \n "+

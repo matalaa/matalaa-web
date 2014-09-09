@@ -187,6 +187,9 @@
 		
 	
 	}
+	#shopDiv {
+	width:75%;
+	}
 }
 
 @media (max-width: 480px) {
@@ -357,6 +360,9 @@
 	.info-text {
 		padding-right: 0;	
 	}
+	#shopDiv {
+	width:75%;
+	}
 }
 
 @media (max-width: 320px) {
@@ -372,6 +378,8 @@
 		padding-top: 90px;
 		padding-bottom: 120px;	
 	}
+	
+ 
 }
 
 

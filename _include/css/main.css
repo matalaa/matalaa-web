@@ -142,6 +142,17 @@ textarea::-webkit-input-placeholder {
   color: #7F8289;
 }
 
+
+td{
+    border:1px solid #000;
+	text-align: left;
+	padding: 5px;
+}
+
+tr td:last-child{
+    width:1%;
+    white-space:nowrap;
+}
 /* ==================================================
    Code and Pre
 ================================================== */
@@ -1483,6 +1494,6 @@ li.content {
             -webkit-border-radius: 30px;
 }
 
-#shopImg {
-	
+#shopDiv {
+	width:70%;
 } 
