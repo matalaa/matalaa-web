@@ -314,7 +314,6 @@ BRUSHED.shopForm = function(){
 		if (liv == 1){
 			document.getElementById('ad-liv').style.display="";
 			livStr="oui";
-			responseText2+=" + "+livPrice+" (livraison)";
 		}
 		
 		//fill the recap table
