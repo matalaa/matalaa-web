@@ -167,7 +167,7 @@ BRUSHED.fancyBox = function(){
 					this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';
 				},
 				helpers : {
-					title : { type: 'inside' },
+					title : { type: 'float' },
 				}
 			});
 			
@@ -687,11 +687,7 @@ $(window).resize(function(){
 	BRUSHED.mobileNav();
 });
 
-/*$('.zoom_img').elevateZoom({
-    zoomType: "inner",
-cursor: "crosshair",
-zoomWindowFadeIn: 500,
-zoomWindowFadeOut: 750
-   });
-*/
+$('.enter_link').click(function() { 
+        $(this).parent().fadeOut(500);
+ });
 });

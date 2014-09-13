@@ -166,7 +166,6 @@ include ("_include/php/parameters_$language.php");
                     </ul>
                 </nav>
         </div>
-            
         <nav id="menu">
         	<ul id="menu-nav">
             	<li class="current"><a href="#home-slider"><?php echo $menu1; ?></a></li>
@@ -244,7 +243,7 @@ include ("_include/php/parameters_$language.php");
 							$project_title = "$parts[1]";
 							$project_imageUrl = "$parts[2]";
 							$project_imageThumbUrl = "$parts[3]";
-							$project_description = "$parts[4]";				
+							$project_description = "";//$parts[4]";				
 							 echo "
 				 				<!-- Item Project and Filter Name -->
 								<li class=\"item-thumbs span2 $project_group\">
@@ -404,8 +403,8 @@ $_GET['showHowMany'] = '100';
 					<li>
                     	<?php echo $contact_city; ?>
                     </li>
-					<li>
-					<div class="fb-like-box" data-href="https://www.facebook.com/matalaadesign" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
+					<li >
+					<div class="fb-like-box"  data-href="https://www.facebook.com/matalaadesign" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
 					</li>
 					<li>
 					<a href="https://twitter.com/_matalaa_" class="twitter-follow-button" data-show-count="false">Follow @_matalaa_</a>
