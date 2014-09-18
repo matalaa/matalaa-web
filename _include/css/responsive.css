@@ -19,10 +19,15 @@
 		margin-right: 20px;
 		
 	}
+	.modalDialog .button {
+		visibility:hidden;
+	}
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
 
+	
+	
 	.item-thumbs {
 		width: 46%;
 		margin-right: 20px;
@@ -189,6 +194,10 @@
 	}
 	#shopDiv {
 	width:75%;
+	}
+	
+	.modalDialog .button {
+		visibility:hidden;
 	}
 }
 
@@ -363,6 +372,9 @@
 	#shopDiv {
 	width:75%;
 	}
+	.modalDialog .button {
+		visibility:hidden;
+	}
 }
 
 @media (max-width: 320px) {
@@ -378,7 +390,9 @@
 		padding-top: 90px;
 		padding-bottom: 120px;	
 	}
-	
+	.modalDialog .button {
+		visibility:hidden;
+	}
  
 }
 

@@ -189,10 +189,24 @@ include ("_include/php/parameters_$language.php");
     </div>
 </header>
 <!-- End Header 한국어-->
+<!--modal-->
+<div id="modal" class="modalDialog">
+	<div>
+		<div class="modalContent">
+			<a href="" title="Close" class="close">X</a>
+			<a href="shopNC.html" ><img src="_include/img/shop/nc_tee2.png"/>
+			</a>
+           	
+		</div>
+		<div id="button" ><a href="shopNC.html" class="button" >Commander</a></div>	
+	</div>
+</div>	
+
 
 <div id="home-slider" id="about" class="firstpage">
 			
 </div>
+
 
 <!--ul class="content"><li class="content"-->
 
