@@ -136,59 +136,11 @@
 				<div class="tabbable">
                 
                     <ul class="nav nav-tabs" id="myTab">
-                        <li id="mainTab" class="active"><a href="#tab1" data-toggle="tab">Matala'a Shop : offre spéciale</a></li>
-						<li style="display:none"><a href="#tab2" data-toggle="tab">Infos livraison</a></li>
+                        <li class="active"><a href="#tab2" data-toggle="tab">Infos livraison</a></li>
 					</ul>
 					
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="tab1">
-                            <div id="shopDiv" >
-								<p>TShirt polynésien - Matala'a NC (2&nbsp;500frcs/TShirt)</p>
-								<form id="shop-form1" class="contact-form" action="#">
-            						<div style="float: left;" id="shop-form1-div" >
-										<select id="quantity" name="quantity" style="width:100px" form="shop-form1">
-  											<option value="none">Quantité</option>
-  											<option value="1">1</option>
-  											<option value="2">2</option>
-  											<option value="3">3</option>
-  											<option value="4">4</option>
-											<option value="5">5</option>
-										</select>
-										<br/>
-										<div id="shop-form1-size">
-										<select name="size1" style="width:100px" form="shop-form1">
-  											<option value="none">Taille</option>
-  											<option value="M">M</option>
-  											<option value="L">L</option>
-  											<option value="XL">XL</option>
-  											<option value="XXL">XXL</option>
-										</select>
-										<br/>
-										</div>
-										Livraison (500frcs): &nbsp;
-										<input type="radio" id="doDeliver" name="doDeliver" value="1"> oui
-										<input type="radio" name="doDeliver" checked value="0"> non
-									</div>
-									<div style="padding-top:8px;">
-										<a id="shop-submit1" class="button" href="#" >Commander</a>
-									</div>
-								</form>
-								<br/>
-								 <div id="responseShop">
-                				</div>
-								<br/>
-								<div style="width:100%;text-align: right;">
-									<span class="font-icon-social-facebook">
-										<div class="fb-share-button" data-href="http://www.matalaa.com/shopNC.html" data-layout="button"></div>
-									</span>
-									<span class="font-icon-social-twitter">
-										<a href="http://www.matalaa.com/shopNC" class="twitter-share-button" data-lang="en">Tweet</a>
-									</span>
-								</div>
-							</div>
-						</div>
-						
-						<div class="tab-pane fade in" id="tab2">
+                        <div class="tab-pane fade in active" id="tab2">
 							<form id="shop-form2" class="contact-form" action="#">
             					<div id="recap">
 									Récapitulatif de la commande: <br/>
@@ -199,27 +151,38 @@
 											<td>prix unitaire</td>
 										</tr>
 										<tr>
-											<td id="recapProduct"/>
-											<td id="recapQtty"/>
-											<td id="recapUnitPrice"/>
+											<td id="recapProduct">
+												coque telephone
+											</td>
+											<td id="recapQtty">
+												4
+											</td>
+											<td id="recapUnitPrice">
+												100
+											</td>
 										</tr>
 										<tr>
-											<td id="livraison"/>
-											<td id="recapLivQtty"/>
-											<td id="recapLivPrice"/>
+											<td id="livraison">Livraison
+											</td>
+											<td id="recapLivQtty">1
+											</td>
+											<td id="recapLivPrice">0
+											</td>
 										</tr>
 										<tr>
 											<td>TOTAL</td>
-											<td />
-											<td id="recapTotal"/>
+											<td/>
+											<td id="recapTotal">
+												400frcs
+											</td>
 										</tr>
 									</table>
                 				</div>
 								<br/>
 								
-								<input id="price" type="hidden" value="" name="price" />
+								<input id="price" type="hidden" value="400" name="price" />
                 				
-                				Informations client: <br/>
+								Informations client: <br/>
 								<p class="contact-name">
             						<input id="contact_name" type="text" placeholder="Nom Prénom" value="" name="name" />
                 				</p>

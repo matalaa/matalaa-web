@@ -324,7 +324,7 @@ BRUSHED.shopForm = function(){
 		$('#recapLivQtty').empty().html(liv);
 		$('#recapLivPrice').empty().html(livPrice);
 		$('#recapTotal').empty().html(newPrice + " FrcsCFP");
-        	
+        document.forms["shop-form2"]["price"].value = newPrice;
 		
     	
 	});
@@ -332,6 +332,7 @@ BRUSHED.shopForm = function(){
 	* listener for the second form
 	******************/
 	$("#shop-submit2").on('click',function() {
+		newPrice = document.forms["shop-form2"]["price"].value;
 		/* check form
 		 */
 		name = document.forms["shop-form2"]["name"].value;
