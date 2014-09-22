@@ -361,7 +361,7 @@ BRUSHED.shopForm = function(){
 		pk_live_GFH31bGg0LjNCanNOl3Tf9EQ
 		*/
 		var handler = StripeCheckout.configure({
-   			 key: 'pk_test_tNU31VJhGfF52OrEeE9Un4F0',
+   			 key: 'pk_live_GFH31bGg0LjNCanNOl3Tf9EQ',
    			 image: 'https://scontent-b-hkg.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10347239_872040652823427_4401894174088211437_n.jpg?oh=6de7d37358285eb92599c0e733b98f68&oe=54A0C010',
    			 token: callback
  		 });
