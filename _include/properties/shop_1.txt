@@ -1,0 +1,9 @@
+image=_include/img/shop/nc_phone.png
+description=Coque telephone samsung note3 et s3
+unitPrice=2500
+quantity=4
+delivery=Livraison
+deliveryPrice=0
+deliveryQuantity=1
+total=10000
+currency=frcs

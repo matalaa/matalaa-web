@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
   preg_match_all('/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $lang_parse);
   if (count($lang_parse[1])){
@@ -248,7 +247,7 @@ include ("_include/php/parameters_$language.php");
                     	<ul id="thumbs">
                         <?php
                          //generated from a parameter file
-                         $file_handle = fopen("listphotos.txt", "rb");
+                         $file_handle = fopen("_include/properties/listphotos.txt", "rb");
 
 						while (!feof($file_handle) ) {
 							$line_of_text = fgets($file_handle);
