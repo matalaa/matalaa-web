@@ -1,3 +1,56 @@
+<?php
+	$shopPropertiesId=$_GET['id'];
+	
+	$image="";
+	$description="";
+	$unitPrice="";
+	$quantity="";
+	$delivery="";
+	$deliveryPrice="";
+	$deliveryQuantity="";
+	$total="";
+	$currency="";
+	
+    //generated from a parameter file
+    $file_handle = fopen("_include/properties/shop_".$shopPropertiesId.".txt", "rb");
+	
+	while (!feof($file_handle) ) {
+		$line_of_text = fgets($file_handle);
+		$parts = explode('=', $line_of_text);
+        $propName = "$parts[0]";
+		$propValue = "$parts[1]";
+		switch ($propName) {
+  			case "image":
+    			$image=$propValue;
+    		break;
+  			case "description":
+    			$description=$propValue;
+    		break;
+  			case "unitPrice":
+    			$unitPrice=$propValue;
+    		break;
+  			case "quantity":
+    			$quantity=$propValue;
+    		break;
+  			case "delivery":
+    			$delivery=$propValue;
+    		break;
+  			case "deliveryPrice":
+    			$deliveryPrice=$propValue;
+    		break;
+  			case "deliveryQuantity":
+    			$deliveryQuantity=$propValue;
+    		break;
+  			case "total":
+    			$total=$propValue;
+    		break;
+  			case "currency":
+    			$currency=$propValue;
+    		break;
+		}			
+     }
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
@@ -128,8 +181,7 @@
 			
 		<!-- Start Blockquote -->
             <div class="span5" id="shopImg">
-           		<img src="_include/img/shop/nc_phone.png"/>
-           		<!--img src="_include/img/shop/nc.png"/-->
+           		<img <?php echo "src=\"".$image."\""; ?>/>
 				
 			</div>
 			<div class="span7">
@@ -152,35 +204,38 @@
 										</tr>
 										<tr>
 											<td id="recapProduct">
-												coque telephone samsung note3 et s3
+												<?php echo $description; ?>
 											</td>
 											<td id="recapQtty">
-												4
+												<?php echo $quantity; ?>
 											</td>
 											<td id="recapUnitPrice">
-												2500
+												<?php echo $unitPrice; ?>
 											</td>
 										</tr>
 										<tr>
-											<td id="livraison">Livraison
+											<td id="livraison">
+												<?php echo $delivery; ?>
 											</td>
-											<td id="recapLivQtty">1
+											<td id="recapLivQtty">
+												<?php echo $deliveryQuantity; ?>
 											</td>
-											<td id="recapLivPrice">0
+											<td id="recapLivPrice">
+												<?php echo $deliveryPrice; ?>
 											</td>
 										</tr>
 										<tr>
 											<td>TOTAL</td>
 											<td/>
 											<td id="recapTotal">
-												10 000frcs
+												<?php echo $total.$currency; ?>
 											</td>
 										</tr>
 									</table>
                 				</div>
 								<br/>
 								
-								<input id="price" type="hidden" value="10000" name="price" />
+								<?php echo " <input id=\"price\" type=\"hidden\" value=\"".$total."\" name=\"price\" />"; ?> 
                 				
 								Informations client: <br/>
 								<p class="contact-name">

@@ -332,7 +332,9 @@ BRUSHED.shopForm = function(){
 	* listener for the second form
 	******************/
 	$("#shop-submit2").on('click',function() {
-		newPrice = document.forms["shop-form2"]["price"].value;
+		newPrice = document.forms["shop-form2"]["price"].value.trim();
+		designation = document.getElementById("recapProduct").innerText;
+		liv = document.getElementById("recapLivQtty").innerText;
 		/* check form
 		 */
 		name = document.forms["shop-form2"]["name"].value;
@@ -349,7 +351,7 @@ BRUSHED.shopForm = function(){
 		ad1 = document.forms["shop-form2"]["adress"].value;
     	ad2 = document.forms["shop-form2"]["postCode"].value;
     	ad3 = document.forms["shop-form2"]["city"].value;
-		if (liv == 1){
+		if (liv > 0){
 			if (ad1 == "" || isNaN(ad2) == true || ad3 == "") {
 				$('#responseShop2').empty().html("<font color=\"red\">Veuillez saisir votre adresse complète</font>");
         		return false;
@@ -368,7 +370,7 @@ BRUSHED.shopForm = function(){
  		 });
 		// Open Checkout with further options
     	handler.open({
-      		name: 'Matalaa TShirt NC',
+      		name: designation,
       		description: '',
       		amount: newPrice,
 			email: mail,
