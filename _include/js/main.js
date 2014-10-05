@@ -287,7 +287,7 @@ BRUSHED.shopForm = function(){
 		if (liv == 1){
 			switch (parseInt(qtty)) {
 				case 1:
-					livPrice = 500;
+					livPrice = 0;
 					break;
 				case 2:
 					livPrice = 500;
