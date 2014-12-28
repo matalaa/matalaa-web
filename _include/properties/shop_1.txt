@@ -1,9 +1,9 @@
-image=_include/img/shop/nc_phone.png
-description=Coque telephone samsung note3 et s3
-unitPrice=2500
-quantity=4
+image=_include/img/shop/nc_tattoo.png
+description=Tattoo manche design
+unitPrice=2000
+quantity=1
 delivery=Livraison
 deliveryPrice=0
-deliveryQuantity=1
-total=10000
+deliveryQuantity=0
+total=2000
 currency=frcs

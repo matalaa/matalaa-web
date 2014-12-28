@@ -348,15 +348,17 @@ BRUSHED.shopForm = function(){
         	$('#responseShop2').empty().html("<font color=\"red\">Veuillez saisir un email valide</font>");
         	return false;
     	}
-		ad1 = document.forms["shop-form2"]["adress"].value;
-    	ad2 = document.forms["shop-form2"]["postCode"].value;
-    	ad3 = document.forms["shop-form2"]["city"].value;
-		if (liv > 0){
-			if (ad1 == "" || isNaN(ad2) == true || ad3 == "") {
-				$('#responseShop2').empty().html("<font color=\"red\">Veuillez saisir votre adresse complète</font>");
-        		return false;
-    		}
-		}
+    	if (document.forms["shop-form2"]["adress"]){
+			ad1 = document.forms["shop-form2"]["adress"].value;
+    		ad2 = document.forms["shop-form2"]["postCode"].value;
+    		ad3 = document.forms["shop-form2"]["city"].value;
+			if (liv > 0){
+				if (ad1 == "" || isNaN(ad2) == true || ad3 == "") {
+					$('#responseShop2').empty().html("<font color=\"red\">Veuillez saisir votre adresse complète</font>");
+        			return false;
+    			}
+			}
+    	}
 		$('#responseShop2').empty();
 		
 		/* launch bill with newPrice

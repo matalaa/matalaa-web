@@ -244,17 +244,22 @@
                 				<p class="contact-email">
                 					<input id="contact_email" type="text" placeholder="Email" value="" name="email" />
                 				</p>
-								<div id="ad-liv" >
-                					<p class="contact-ad1">
-                						<input id="contact-ad1" type="text" placeholder="Adresse" value="" name="adress" />
+                				
+                				<?php
+                				if ($deliveryQuantity == 1) {
+								echo "<div id=\"ad-liv\" >
+                					<p class=\"contact-ad1\">
+                						<input id=\"contact-ad1\" type=\"text\" placeholder=\"Adresse\" value=\"\" name=\"adress\" />
                 					</p>
-									<p class="contact-ad2">
-                						<input id="contact-ad2" type="text" placeholder="Code postal" value="" name="postCode" />
+									<p class=\"contact-ad2\">
+                						<input id=\"contact-ad2\" type=\"text\" placeholder=\"Code postal\" value=\"\" name=\"postCode\" />
                 					</p>
-									<p class="contact-ad3">
-                						<input id="contact-ad3" type="text" placeholder="Ville" value="" name="city" />
+									<p class=\"contact-ad3\">
+                						<input id=\"contact-ad3\" type=\"text\" placeholder=\"Ville\" value=\"\" name=\"city\" />
                 					</p>
-								</div>
+								</div>";
+								}
+								?>
                 				<p class="contact-submit">
                 					<a id="shop-submit2" class="button" href="#">Procéder au paiement</a>
                					</p>
