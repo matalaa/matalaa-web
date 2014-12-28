@@ -12,7 +12,7 @@ header('Content-type: application/json');
 // See your keys here https://dashboard.stripe.com/account
 //sk_test_M6X3oFRbstm8VuBwoTJNZUXG
 //sk_live_0wtSTDiYACsKvfC3YBgXN9ZE
-Stripe::setApiKey("sk_live_0wtSTDiYACsKvfC3YBgXN9ZE");
+Stripe::setApiKey("sk_live_XyTtSGFlnsUOOOm2OB3SJh5Y");
 
 // Get the credit card details submitted by the form
 $token = $_POST['token'];

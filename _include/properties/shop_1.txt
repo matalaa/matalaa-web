@@ -1,9 +1,9 @@
-image=_include/img/shop/nc_tattoo.png
-description=Tattoo manche design
-unitPrice=2000
+image=_include/img/shop/moana.png
+description=Design pour tshirt Moana club
+unitPrice=198
 quantity=1
 delivery=Livraison
 deliveryPrice=0
 deliveryQuantity=0
-total=2000
-currency=frcs
+total=19800
+currency=eur
