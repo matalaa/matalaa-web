@@ -4,7 +4,6 @@ logo;nc;_include/img/work/full/full_work_nc.jpg;_include/img/work/thumbs/thumb_w
 logo;986;_include/img/work/full/full_work_986.jpg;_include/img/work/thumbs/thumb_work_986.jpg;Wallis&Futuna
 tattoo;tattoo1;_include/img/work/full/full_work_tattoo1.jpg;_include/img/work/thumbs/thumb_work_tattoo1.jpg;Tattoo1
 tattoo;tattoo2;_include/img/work/full/full_work_tattoo2.jpg;_include/img/work/thumbs/thumb_work_tattoo2.jpg;Tattoo2
-tattoo;tattoo3;_include/img/work/full/full_work_tattoo3.jpg;_include/img/work/thumbs/thumb_work_tattoo3.jpg;Tattoo3
 phone;phone1;_include/img/work/full/full_work_phone1.jpg;_include/img/work/thumbs/thumb_work_phone1.jpg;Phone1
 phone;phone2;_include/img/work/full/full_work_phone2.jpg;_include/img/work/thumbs/thumb_work_phone2.jpg;Phone2
 phone;phone3;_include/img/work/full/full_work_phone3.jpg;_include/img/work/thumbs/thumb_work_phone3.jpg;Phone3

@@ -189,7 +189,7 @@ include ("_include/php/parameters_$language.php");
 </header>
 <!-- End Header 한국어-->
 <!--modal-->
-<div id="modal" class="modalDialog">
+<!--div id="modal" class="modalDialog">
 	<div>
 		<div class="modalContent">
 			<a href="" title="Close" class="close">X</a>
@@ -199,7 +199,7 @@ include ("_include/php/parameters_$language.php");
 		</div>
 		<div id="button" ><a href="shopNC.html" class="button" >Commander</a></div>	
 	</div>
-</div>	
+</div-->	
 
 
 <div id="home-slider" id="about" class="firstpage">
